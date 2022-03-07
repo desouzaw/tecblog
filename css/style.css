@@ -1,0 +1,205 @@
+/* Reset */
+* {
+   border: 0;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+/* General */
+:root {
+   --blue: #2878f0;
+   --grey: rgb(173, 166, 166);
+   --light-grey: #e4dede;
+   --white: #fff;
+}
+
+html {
+   font-size: 10px;
+}
+
+body {
+   background-color: var(--light-grey);
+}
+
+a {
+   text-decoration: none;
+}
+
+img {
+   width: 100%;
+}
+
+ul {
+   list-style: none;
+}
+
+.white {
+   color: var(--white);
+}
+
+.read-more {
+   color: var(--blue);
+   text-decoration: underline;
+}
+
+/* Header */
+header {
+   background-color: var(--blue);
+   padding: 2rem 0;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+header h1 {
+   font-size: 4rem;
+}
+
+header .menu {
+   margin-top: 1rem;
+   display: flex;
+}
+
+header .menu li {
+   margin: 0 1rem;
+}
+
+header .menu li:first-child {
+   margin-left: 0;
+}
+
+header .menu li:last-child {
+   margin-right: 0;
+}
+
+header .menu a {
+   font-size: 1.8rem;
+   color: var(--white);
+}
+
+header .menu a:hover {
+   background-color: var(--white);
+   color: var(--blue);
+   padding: 0.5rem;
+   border-radius: 0.4rem;
+   font-weight: bold;
+   transition-duration: 0.2s;
+}
+
+/* container */
+#container {
+   display: grid;
+   grid-template-columns: 1fr 25rem;
+   grid-template-areas: 
+      "main    aside"
+      "main    ."
+      "footer  footer";
+   gap: 2rem;
+
+   max-width: 96rem;
+   margin: 2rem auto 0;
+}
+
+/* main */ 
+main {
+   grid-area: main;
+}
+
+/* article */
+.article {
+   background-color: var(--white);
+   padding: 1rem;
+}
+
+.article + .article {
+   margin-top: 2rem;
+}
+
+.article h2 {
+   font-size: 2.4rem;
+}
+
+.article span {
+   font-size: 1.4rem;
+}
+
+.article img {
+   margin-top: 1.5rem;
+}
+
+.article p {
+   font-size: 1.8rem;
+}
+
+.article .read-more {
+   font-size: 1.6rem;
+}
+
+/* aside */
+aside {
+   grid-area: aside;
+}
+
+aside section {
+   background-color: var(--white);
+   padding: 1rem;
+}
+
+aside h3 {
+   background-color: var(--grey);
+   font-size: 1.6rem;
+   padding-left: 0.4rem;
+}
+
+/* recent-posts */
+aside .recent-posts {
+   margin-bottom: 2rem;
+}
+
+aside .recent-posts p {
+   font-size: 1.6rem;
+   margin-top: 0.5rem;
+}
+
+aside .recent-posts .read-more {
+   font-size: 1.4rem;
+}
+
+aside .recent-posts div + div {
+   border-top: 0.1rem solid var(--grey);
+   margin-top: 1rem;
+}
+
+/* categories */
+aside .categories nav {
+   margin-top: 0.5rem;
+}
+
+aside .categories a {
+   font-size: 1.6rem;
+   color: var(--blue);
+   font-weight: bold;
+   display: block;
+}
+
+aside .categories a:hover {
+   background-color: var(--blue);
+   color: var(--light-grey);
+   padding: 0.5rem;
+}
+
+/* footer */
+footer {
+   grid-area: footer;
+   background-color: var(--grey);
+   padding: 1.5rem 0;
+}
+
+footer p {
+   text-align: center;
+   font-weight: bold;
+   font-size: 1.8rem;
+}
+
