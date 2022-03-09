@@ -57,29 +57,29 @@ header h1 {
    font-size: 4rem;
 }
 
-header .menu {
+header #menu {
    margin-top: 1rem;
    display: flex;
 }
 
-header .menu li {
+header #menu .item-menu {
    margin: 0 1rem;
 }
 
-header .menu li:first-child {
+header #menu .item-menu:first-child {
    margin-left: 0;
 }
 
-header .menu li:last-child {
+header #menu .item-menu:last-child {
    margin-right: 0;
 }
 
-header .menu a {
+header #menu a {
    font-size: 1.8rem;
    color: var(--white);
 }
 
-header .menu a:hover {
+header #menu a:hover {
    background-color: var(--white);
    color: var(--blue);
    padding: 0.5rem;
@@ -98,7 +98,7 @@ header .menu a:hover {
    gap: 2rem;
 
    max-width: 96rem;
-   margin: 2rem auto 0;
+   margin: 2rem auto 0 auto;
 }
 
 /* main */ 
@@ -130,6 +130,7 @@ main {
 
 .article p {
    font-size: 1.8rem;
+   text-align: justify;
 }
 
 .article .read-more {
@@ -194,6 +195,7 @@ footer {
    grid-area: footer;
    background-color: var(--grey);
    padding: 1.5rem 0;
+   width: 100%;
 }
 
 footer p {
@@ -202,3 +204,29 @@ footer p {
    font-size: 1.8rem;
 }
 
+/* Responsive */
+@media (max-width: 768px) {
+   #container {
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+      "main"
+      "aside"
+      "footer";
+   }
+
+   .article {
+      width: 90%;
+      margin: 0 auto;
+   }
+
+   aside {
+      width: 25rem;
+      margin: 0 auto;
+   }
+}
+
+@media (max-width: 425px) {
+   .article {
+      width: 100%;
+   }   
+}
