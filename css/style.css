@@ -94,7 +94,6 @@ header .menu a:hover {
    grid-template-columns: 1fr 25rem;
    grid-template-areas: 
       "main    aside"
-      "main    ."
       "footer  footer";
    gap: 2rem;
 
