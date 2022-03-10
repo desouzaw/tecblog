@@ -6,12 +6,17 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>TecBlog</title>
       <link rel="stylesheet" href="./css/style.css" />
+      <script src="./script/menu.js" defer></script>
    </head>
    <body>
-      <header>
+      <header class="flex-start">
          <h1>Tec<span class="white">Blog</span></h1>
 
          <nav id="nav">
+            <button id="btn-mobile">
+               <img src="./assets/menu-icon.svg" alt="menu mobile" />
+            </button>            
+
             <ul id="menu">
                <li class="item-menu"><a href="#">Sobre</a></li>
                <li class="item-menu"><a href="#">Jogos</a></li>
@@ -26,7 +31,7 @@
             <article class="article">
                <h2>Título da postagem 1</h2>
                <span>postado em 20 de março de 2022</span>
-               <img src="./images/imagem2.jpg" />
+               <img src="./assets/imagem2.jpg" />
                <p>
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Magni blanditiis placeat voluptatum iusto illo, in saepe
@@ -39,7 +44,7 @@
             <article class="article">
                <h2>Título da postagem 2</h2>
                <span>postado em 20 de março de 2022</span>
-               <img src="./images/imagem1.jpg" />
+               <img src="./assets/imagem1.jpg" />
                <p>
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Magni blanditiis placeat voluptatum iusto illo, in saepe
